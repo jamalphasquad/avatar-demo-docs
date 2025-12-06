@@ -1,4 +1,4 @@
-# Avatar Demo API Integration Guide
+# Avatar API Integration Guide
 
 ## Overview
 
@@ -164,7 +164,7 @@ let sessionToken = null;
 
 async function startAvatarSession() {
   // Step 1: Create session
-  const sessionData = await fetch('https://avatar-demo.homlndr.com/api/avatar/start-session', {
+  const sessionData = await fetch('**demo_url**/api/avatar/start-session', {
     method: 'POST',
     headers: {
       'Authorization': 'Bearer YOUR_TOKEN',
@@ -212,7 +212,7 @@ async function startAvatarSession() {
   });
 
   // Step 3: Start streaming
-  await fetch('https://avatar-demo.homlndr.com/api/avatar/streaming-start', {
+  await fetch('**demo_url**/api/avatar/streaming-start', {
     method: 'POST',
     headers: {
       'Authorization': 'Bearer YOUR_TOKEN',
@@ -229,7 +229,7 @@ async function startAvatarSession() {
 }
 
 async function sendMessageToAvatar(text) {
-  await fetch('https://avatar-demo.homlndr.com/api/avatar/send-task', {
+  await fetch('**demo_url**/api/avatar/send-task', {
     method: 'POST',
     headers: {
       'Authorization': 'Bearer YOUR_TOKEN',
@@ -243,7 +243,7 @@ async function sendMessageToAvatar(text) {
 }
 
 async function stopAvatarSession() {
-  await fetch('https://avatar-demo.homlndr.com/api/avatar/stop-session', {
+  await fetch('**demo_url**/api/avatar/stop-session', {
     method: 'POST',
     headers: {
       'Authorization': 'Bearer YOUR_TOKEN',
@@ -289,7 +289,7 @@ Error responses follow this format:
 
 ## Configuration
 
-Default server URL: `https://avatar-demo.homlndr.com`
+Default server URL: `**demo_url**`
 
 Update the `BACKEND_URL` constant in your implementation to match your deployment.
 
