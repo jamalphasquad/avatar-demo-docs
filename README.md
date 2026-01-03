@@ -57,9 +57,16 @@ Creates and initializes a new avatar streaming session.
 **Request Body:**
 ```json
 {
-  "quality": "medium"
+  "quality": "medium",
+  "rate": 0.7
 }
 ```
+
+**Parameters:**
+- `quality`: Video quality - `"low"`, `"medium"`, or `"high"` (default: `"low"`)
+- `rate`: Speech speed control, range 0.5-1.5 (default: `0.7`). Lower is slower, higher is faster
+- `avatarId`: Optional avatar ID (uses .env AVATAR_ID if not provided)
+- `sdp`: Optional WebRTC SDP offer to start streaming immediately
 
 **Response:**
 ```json
